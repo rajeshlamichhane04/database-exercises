@@ -51,4 +51,10 @@ SELECT name FROM albums WHERE sales < 20.0;
 'Titanic: Music from the Motion Picture'
 'Nevermind'
 'The Wall'*/
+SELECT *
+FROM albums
+WHERE genre REGEXP '^Rock|Hard rock|Progressive rock';
+/*  query results does not include albums with a genre of "Hard rock" or "Progressive rock"?
+becuase it looks for genre "Rock" only useless specified otherwise
 
+-- 
