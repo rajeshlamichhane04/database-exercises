@@ -42,7 +42,34 @@ WHERE last_name LIKE 'E%' AND
 SELECT *
 FROM employees
 WHERE last_name LIKE '%E';
--- 24292 records ends last name with 'E' regardless of whether they start with E
+-- 24292 records ends last name with 'E' regardless of whether they start with 'E'
 
-	
+SELECT *
+FROM employees
+WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'; 	
+-- 135214 employees were hired in the 90s
 
+SELECT *
+FROM employees
+WHERE birth_date LIKE '%-12-25';
+-- 842 records were born in christmas
+
+
+SELECT *
+FROM employees
+WHERE birth_date LIKE '%-12-25' AND
+		hire_date BETWEEN '1990-01-01' AND '1999-12-31';
+--  362 record have birthdays in Christmas and hired in 90s
+
+
+SELECT *
+FROM employees
+WHERE last_name LIKE '%q%';
+-- 1873 records showes employees with a 'q' in last name
+
+
+SELECT *
+FROM employees
+WHERE last_name LIKE '%q%' AND
+	last_name NOT LIKE '%qu%';
+-- 547 records showes employees with q in last name but not qu
