@@ -35,8 +35,8 @@ WHERE last_name LIKE '%E' AND
 
 SELECT *
 FROM employees
-WHERE last_name LIKE 'E%' AND
-	last_name LIKE '%E';
+WHERE last_name LIKE 'E%E';
+
 -- 899 records begins and ends last name with 'E'
 
 SELECT *
@@ -58,7 +58,7 @@ WHERE birth_date LIKE '%-12-25';
 SELECT *
 FROM employees
 WHERE birth_date LIKE '%-12-25' AND
-		hire_date BETWEEN '1990-01-01' AND '1999-12-31';
+		hire_date LIKE '199%';
 --  362 record have birthdays in Christmas and hired in 90s
 
 
