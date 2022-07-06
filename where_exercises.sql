@@ -72,4 +72,4 @@ SELECT *
 FROM employees
 WHERE last_name LIKE '%q%' AND
 	last_name NOT LIKE '%qu%';
--- 547 records showes employees with q in last name but not qu
+-- 547 records showes employees with q in last name but not qu.
