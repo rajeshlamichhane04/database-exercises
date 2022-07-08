@@ -173,7 +173,6 @@ LIMIT 1;
  'Vishwani','Minakawa','106491','Marketing'
  */
  
-
 -- 10 Determine the average salary for each department. 
 
 SELECT dept_name, ROUND(AVG(salary),0) AS Salary
@@ -195,7 +194,6 @@ ORDER BY AVG(salary) DESC;
 'Customer Service','58770'
 'Quality Management','57251'
 'Human Resources','55575'
-
 */
 
 
