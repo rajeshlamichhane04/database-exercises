@@ -14,17 +14,15 @@ CASE
     WHEN substr(last_name,1,1) BETWEEN 'I' AND 'Q' THEN 'I-Q'
     WHEN substr(last_name,1,1) BETWEEN 'R' AND 'Z' THEN 'R-Z'
     END AS 'alpha_group'
-FROM employees
-GROUP BY alpha_group;
+FROM employees;
 
 -- 3. How many employees (current or previous) were born in each decade?
-SELECT birth_date, 
-COUNT (),
+SELECT count(*),
 CASE
 	WHEN birth_date BETWEEN '1950-01-01' AND '1959-12-31' THEN 'Born in 50s'
 	WHEN birth_date BETWEEN '1960-01-01' AND '1969-12-31' THEN 'Born in 60s'
-    WHEN birth_date BETWEEN '1970-01-01' AND '1979-12-31' THEN 'Born in 70s'
-END AS birth_decade
+    ELSE 'Baby'
+    END AS birth_decade
 FROM employees
 GROUP BY birth_decade;
 
